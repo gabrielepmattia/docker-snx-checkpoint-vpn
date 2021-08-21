@@ -49,4 +49,8 @@ expect "SNX - connected."
 interact
 EOF
 
-/bin/bash
+# monitor if snx is running every 60s
+while [ ! -z $(pidof snx) ]
+do
+    sleep 60s
+done
